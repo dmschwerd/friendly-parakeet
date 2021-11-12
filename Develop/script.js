@@ -15,10 +15,20 @@ function generatePassword() {
     usedChars = usedChars + upperCaseChars; 
   }
 
-    var specialAdded = window.confirm('Would you like your password to use special characters?');
+  var specialAdded = window.confirm('Would you like your password to use special characters?');
   if (specialAdded) {
     usedChars = usedChars + specialChars; 
   }
+
+  var passwordLength = window.prompt('How long would you like your password to be? Must be between 8 and 128 characters.');
+  var password = '';
+
+  if (passwordLength >= 8 && passwordLength <= 128) {
+    for (var i = 0; i < passwordLength; i++) {
+      
+    }
+  } 
+
   return usedChars;
 }
 
